@@ -1,0 +1,365 @@
+
+@media (max-width: 768px) {
+  
+  .accordion-item .accordion-thumb h3 {
+    font-size: revert !important;
+  }
+  .faq-mob {
+    display: none;
+  }
+  .pro-div {
+    width: 50%;
+  }
+  .pro-head-div {
+    font-size: small !important;
+  }
+  .offer-div {
+    font-size: medium !important;
+  }
+  .pro-btn {
+    margin-top: 0px !important;
+    margin-bottom: 18px !important;
+  }
+  .rev-head-div {
+    margin-bottom: 0px !important;
+  }
+  /* .prod-div {
+    margin-top: 0px !important;
+  } */
+  .prod-cont {
+    max-width: 90% !important;
+  }
+  .ban-div {
+    height: 240px !important;
+  }
+  .rev-div {
+    display: none !important;
+  }
+
+  .offer-head-div {
+    margin-top: 19px !important;
+  }
+  .ser-mob-view {
+      margin-left: 8px;
+  }
+  .ser-mob-head {
+    margin-top: 38px;
+  }
+  .sec-offer-div {
+    margin-top: 44px !important;
+  }
+  .prod-head {
+    font-size: small !important;
+  }
+  .mob-sec-div {
+    margin-top: 0px !important;
+  }
+  .faq_mob {
+    display: none !important;
+  }
+
+}
+
+/* Center the button horizontally and vertically */
+.title-prod {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Style the button */
+.view-product {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white; /* Primary blue color */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect for the button */
+.view-product:hover {
+  background-color: #fbc094 !important;
+  transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+/* Optional: Active state */
+.view-product:active {
+  background-color: white; /* Even darker blue */
+  transform: scale(1); /* Reset size on click */
+}
+
+	/* Video section styling */
+  /* .video-section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+} */
+
+.video-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px; /* Optional padding for better spacing */
+    box-sizing: border-box;
+}
+
+.video-box {
+    width: 100%;
+    max-width: 1200px;
+    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio for the video */
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-box iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+/* Media Queries for smaller screens */
+@media (max-width: 768px) {
+    .video-box {
+        max-width: 90%; /* Reduce width on smaller screens */
+    }
+}
+
+/* Css for learn more */
+
+
+.truncate-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Show only 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 3em; /* Adjust based on line height */
+}
+
+.fbox-4.expanded .truncate-text {
+    -webkit-line-clamp: unset; /* Show full text */
+    max-height: none;
+    overflow: visible;
+}
+
+/* ----------------------product----------------------- */
+/* Adds margin between carousel items */
+.reviews-carousel-product .owl-item {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Styles for the navigation buttons */
+.prev-pro-btn, .next-pro-btn {
+  font-size: 36px !important;
+  color: #333 !important;
+  background-color: none !important;
+  /* border: 1px solid #ccc; */
+  padding: 10px;
+  margin-top: -50px !important;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 50% !important;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.owl-prev-btn {
+  left: -40px; /* Position for the left button */
+}
+
+.owl-next-btn {
+  right: -40px; /* Position for the right button */
+}
+
+/* Hover effect for buttons */
+.owl-prev-btn:hover, .owl-next-btn:hover {
+  background-color: #a3a19e !important;
+  /* border-color: #c62d2d; */
+}
+
+/* Ensures carousel items have proper alignment */
+.reviews-carousel-product .owl-stage {
+  display: flex;
+  align-items: center;
+}
+
+/* Contact Page Start */
+
+.information-section {
+    position: relative;
+}
+.bg-color-3 {
+    background-color: #e8c7cf;
+}
+.sec-pad {
+    padding: 115px 0px 120px 0px;
+}
+.centred {
+    text-align: center;
+}
+.pattern-layer {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    outline: none;
+}
+.auto-container {
+    position: static;
+    max-width: 1200px;
+    padding: 0px 15px;
+    margin: 0 auto;
+}
+.information-section .sec-title {
+    margin-bottom: 40px;
+}
+.sec-title.centred {
+    text-align: center !important;
+}
+.sec-title {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+}
+.contact-div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+@media (min-width: 992px) {
+    .col-lg-4 {
+        -ms-flex: 0 0 33.333333%;
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+}
+/* @media (min-width: 576px) {
+    .col-sm-12 {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+} */
+.single-information-block .inner-box {
+    position: relative;
+    display: block;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 76px 30px 69px 30px;
+}
+.single-information-block .inner-box {
+    height: 370px;
+}
+.single-information-block .inner-box .pattern {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 166px;
+    height: 83px;
+    background-repeat: no-repeat;
+}
+.single-information-block .inner-box p {
+    position: relative;
+    display: block;
+    font-size: 15px;
+    line-height: 26px;
+    color: #808080;
+}
+.single-information-block .inner-box .icon-box {
+    position: relative;
+    min-height: 93px;
+    margin-bottom: 23px;
+    transition: all 500ms ease;
+}
+h3 {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    margin: 0px;
+    transition: all 500ms ease;
+}
+/* Contact Page End */
+/* CSS HOVER */
+.hover-link {
+  text-decoration: none; /* Optional, to remove underline */
+}
+
+.hover-link h6 {
+  color: initial; /* Default color */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.hover-link:hover h6 {
+  color: #bea3aa; /* Replace with your desired hover color */
+}
+
+/* home page Modal */
+	.modal-content {
+		border-radius: 10px;
+		overflow: hidden;
+	}
+
+	.video-container {
+		border-right: 1px solid #ddd;
+		padding-right: 10px;
+	}
+
+	.product-details {
+		padding: 15px;
+	}
+
+	.product-details h4 {
+		font-size: 1.5rem;
+		margin-bottom: 10px;
+	}
+
+	.product-details p {
+		margin-bottom: 10px;
+		font-size: 1rem;
+	}
+
+	.product-details .btn {
+		background-color: #007bff;
+		color: #fff;
+		border: none;
+		padding: 10px 20px;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+  .mob-ban-head {
+    font-size: xxx-large !important;
+}
+
+@media (max-width: 768px) { /* Adjust for mobile screens */
+  .mob-ban-head {
+        font-size: x-large !important;
+    }
+}
+
+.mob-ban-bg {
+  position: relative;
+  background-color: rgb(93 93 93 / 50%); /* Black with 50% opacity */
+  padding: 20px; /* Adjust padding as needed */
+}
+
+video::-webkit-media-controls-fullscreen-button {
+  display: none !important;
+}

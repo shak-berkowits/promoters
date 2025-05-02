@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^adminpage/(.+)$ index.php?adminpage=$1 [NC,L]
+RewriteRule ^promoter/(.+)$ index.php?promoterpage=$1 [NC,L]
+RewriteRule ^([^\.]+)$ index.php?page=$1 [NC,L]
+
