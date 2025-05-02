@@ -1,4 +1,5 @@
 <?php
+// lead form
 session_start();
 include_once(__DIR__ . "/../config/config.php");
 include_once(__DIR__ . "/../config/constant.php");
