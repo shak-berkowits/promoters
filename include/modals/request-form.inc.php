@@ -178,7 +178,7 @@
     </div>
 </div>
 
-<script>
+<!-- <script>
     document.addEventListener("DOMContentLoaded", function() {
         const verifyCheckbox = document.getElementById("verifyCheckbox");
         const nonVerifyCheckbox = document.getElementById("nonVerifyCheckbox");
@@ -228,6 +228,73 @@
                 .then(data => {
                     if (data.success) {
                         alert("OTP sent successfully!");
+                    } else {
+                        alert("Failed to send OTP. Please try again.");
+                        verifyCheckbox.checked = false;
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    alert("An error occurred. Please try again.");
+                    verifyCheckbox.checked = false;
+                });
+        }
+    });
+</script> -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const verifyCheckbox = document.getElementById("verifyCheckbox");
+        const nonVerifyCheckbox = document.getElementById("nonVerifyCheckbox");
+        const otpSection = document.getElementById("otpSection");
+
+        verifyCheckbox.addEventListener("change", function() {
+            if (this.checked) {
+                otpSection.classList.remove("d-none");
+                nonVerifyCheckbox.checked = false; // Uncheck Non-Verify
+
+                // Send OTP API call
+                sendOtp();
+            } else {
+                otpSection.classList.add("d-none");
+            }
+        });
+
+        nonVerifyCheckbox.addEventListener("change", function() {
+            if (this.checked) {
+                otpSection.classList.add("d-none");
+                verifyCheckbox.checked = false; // Uncheck Verify
+                document.getElementById("otpInput").removeAttribute("required");
+                
+            }
+        });
+
+        function sendOtp() {
+            const phone = document.getElementById("mobile_number").value;
+            const requestFrom = "PromoterLeadForm";
+
+            if (!phone) {
+                alert("Please enter a phone number.");
+                otpSection.classList.add("d-none");
+                verifyCheckbox.checked = false;
+                exit;
+            }
+            const APP_BASE_URL = "<?php echo APP_BASE_URL; ?>";
+            fetch(`${APP_BASE_URL}api/send_voucher`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        phone: phone,
+                        request_from: requestFrom
+                    })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        alert("OTP sent successfully!");
+                        document.getElementById("otpInput").setAttribute("required", true);
                     } else {
                         alert("Failed to send OTP. Please try again.");
                         verifyCheckbox.checked = false;

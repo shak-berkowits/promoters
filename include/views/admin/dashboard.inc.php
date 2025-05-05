@@ -26,7 +26,7 @@
 <?php
 
 include_once("./include/code/admin-dashboard.php");
-if ($access == ADMIN_ACCESS_CODE) {
+if (isset($_COOKIE['admin_auth']) && $_COOKIE['admin_auth'] == "1") {
 ?>
 
 ?>

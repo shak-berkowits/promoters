@@ -1,6 +1,6 @@
 <?php
-$access = $_SESSION['access_token'];
-if ($access == ADMIN_ACCESS_CODE ) {
+// $access = $_SESSION['access_token'];
+if (isset($_COOKIE['admin_auth']) && $_COOKIE['admin_auth'] == "1") {
 ?>
 <div id="signup" class="bg--fixed signup-3 login-section division tab-pane">
     <div class="container">

@@ -52,6 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $responseData = json_decode($verifyOtpResponse, true);
 
         if ($responseData && isset($responseData['success']) && $responseData['success'] == 1) {
+            setcookie("otp_verified", "1", time() + 86400, "/"); // Cookie valid for 24 hours
             echo "success"; // OTP matched successfully
         } else {
             echo "invalid_otp"; // OTP verification failed

@@ -141,6 +141,7 @@ $(document).ready(function() {
                 return;
             }
             $(".loader").show();
+            $(".otp-btn").hide();
             $.post("<?= BASE_URL ?>include/code/login-form.php", { action: "verify_otp", otp: otp }, function(response) {
                 $(".loader").hide();
                 if (response === "success") {

@@ -87,6 +87,9 @@ if (isset($_REQUEST['lead_modal_form'])) {
         $stmt->bind_param("issssisssssiss", $promoter_id, $first_name, $last_name, $mobile_number, $alternate_number, $mobile_verify, $concern_type, $gender, $campaign_id, $preferred_time, $additional_comments, $hot_lead, $created_at, $updated_at);
 
         if ($stmt->execute()) {
+            // $cma_api_url=CMA_API_BASE_URL."save_lead_send_to_altius";
+            // $method = "POST";
+            // $saveLead=save_lead_send_to_altius($cma_api_url,$method,$param);
             echo "<script>alert('Lead Form submitted successfully!'); window.location.href='" . BASE_URL . "promoter/dashboard';</script>";
             exit();
         } else {

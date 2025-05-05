@@ -13,6 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($code === ADMIN_ACCESS_CODE) {
         $_SESSION["admin_logged_in"] = true;
         $_SESSION["access_token"] = ADMIN_ACCESS_CODE;
+        setcookie("admin_auth", "1", time() + 86400, "/");
         echo json_encode(["status" => "success", "message" => "Access granted. Redirecting..."]);
     } else {
         echo json_encode(["status" => "error", "message" => "Invalid access code!"]);

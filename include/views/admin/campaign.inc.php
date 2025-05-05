@@ -3,8 +3,8 @@
     $query = "SELECT * FROM promoters_campaign ORDER BY id ASC";
     $promoterResult = $conn->query($query);
     
-    $access = $_SESSION['access_token'];
-    if ($access == ADMIN_ACCESS_CODE ) {
+    // $access = $_SESSION['access_token'];
+    if (isset($_COOKIE['admin_auth']) && $_COOKIE['admin_auth'] == "1") {
 
 ?>
 <div class="container r-04 tab-pane" id="promoters" style="margin-top:150px; border: 1px solid #999999;">

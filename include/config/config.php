@@ -1,7 +1,7 @@
 <?php 
 // Select Environment
-$env="production";
-//$env="localhost";
+// $env="production";
+$env="localhost";
 switch ($env){
     case 'production':
         define("BASE_URL","https://berkowits.com/promoters/");

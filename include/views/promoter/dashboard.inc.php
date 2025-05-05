@@ -14,7 +14,7 @@
 </style>
 <?php
 include_once("./include/code/promoters-dashboard.php");
-if (isset($encryption_id)) {
+if (isset($_COOKIE['otp_verified']) && $_COOKIE['otp_verified'] == "1") {
 ?>
 	<section id="integrations-4" class="pt-100 mt-5 integrations-section division">
 		<div class="container">

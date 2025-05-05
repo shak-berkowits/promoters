@@ -1,11 +1,11 @@
 <?php
-session_start();
-include_once("./include/config/config.php");
-include_once("./include/config/constant.php");
-include_once("./include/functioins.php");
-//var_dump("promoter=".$_REQUEST['promoterpage']);
-//var_dump("adminpage=".$_REQUEST['adminpage']);
-//var_dump("page=".$_REQUEST['page']);
+	session_start();
+	include_once("./include/config/config.php");
+	include_once("./include/config/constant.php");
+	include_once("./include/functioins.php");
+	//var_dump("promoter=".$_REQUEST['promoterpage']);
+	//var_dump("adminpage=".$_REQUEST['adminpage']);
+	//var_dump("page=".$_REQUEST['page']);
 ?>
 
 <!doctype html>
@@ -62,11 +62,11 @@ include_once("./include/functioins.php");
             ----------------------------------  -->
 		<?php
 
-		if ($show_msg) {
-			echo "<section id='hero-20'><div class='container'><div class='alert alert-warning' role='alert'>
-					<i style='margin-right: 10px;font-size:x-large' class='fa fa-solid fa-check' aria-hidden='true'></i> SUCCESS : Thank you! We have received your request, we will contact you shortly!
-					</div></div></section>";
-		}
+		// if ($show_msg) {
+		// 	echo "<section id='hero-20'><div class='container'><div class='alert alert-warning' role='alert'>
+		// 			<i style='margin-right: 10px;font-size:x-large' class='fa fa-solid fa-check' aria-hidden='true'></i> SUCCESS : Thank you! We have received your request, we will contact you shortly!
+		// 			</div></div></section>";
+		// }
 
 		if (isset($_REQUEST['page'])) {
 			$pagename = $_REQUEST['page'];

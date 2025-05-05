@@ -51,7 +51,7 @@
 										<a href="#" class="btn r-06 hover--tra-coal last-link" style="border: 1px solid;" data-bs-toggle="modal" data-bs-target="#campaignModal">Add campaign</a>
 									</li>
 									<li class="nl-simple" aria-haspopup="true">
-										<a href="<?= BASE_URL ?>include/code/logout.php" class="btn r-06 hover--tra-coal last-link">
+										<a href="<?= BASE_URL ?>include/code/admin-logout.php" class="btn r-06 hover--tra-coal last-link">
 											<img src="<?= ASSET_DIR_PATH ?>log-in.png" alt="Icon" style="width:22px; height:22px; vertical-align:middle; margin-right:5px;">
 											Logout
 										</a>
